@@ -8,7 +8,7 @@ import {
   DevicePhoneMobileIcon,
   IdentificationIcon,
 } from "@heroicons/react/24/solid";
-import { InputForm } from "../components/ui/InputForm";
+import { InputForm } from "../components/InputForm";
 import { Validation } from "../functions/validation";
 import * as axiosInstance from "../services/axiosService";
 
