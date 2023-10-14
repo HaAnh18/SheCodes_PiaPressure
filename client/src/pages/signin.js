@@ -4,11 +4,11 @@ import {
   EnvelopeIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
-import { InputForm } from "../../components/ui/InputForm";
-import { ValidationSignin } from "./validationSignin";
-import * as axiosInstance from "../../services/axiosService";
+import { InputForm } from "../components/ui/InputForm";
+import { ValidationSignin } from "../functions/validationSignin";
+import * as axiosInstance from "../services/axiosService";
 
-export function Signin() {
+export default function Signin() {
   const [message, setMessage] = useState(null);
   const [values, setValues] = useState({
     username: undefined,

@@ -8,11 +8,11 @@ import {
   DevicePhoneMobileIcon,
   IdentificationIcon,
 } from "@heroicons/react/24/solid";
-import { InputForm } from "../../components/ui/InputForm";
-import { Validation } from "./validation";
-import * as axiosInstance from "../../services/axiosService";
+import { InputForm } from "../components/ui/InputForm";
+import { Validation } from "../functions/validation";
+import * as axiosInstance from "../services/axiosService";
 
-export function Signup() {
+export default function Signup() {
   const [values, setValues] = useState({
     name: undefined,
     username: undefined,

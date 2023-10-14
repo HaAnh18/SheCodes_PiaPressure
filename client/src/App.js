@@ -1,13 +1,14 @@
 // import { Signup } from './pages/signup/signup';
-import { Signin } from './pages/signin/signin';
+
 import './App.css';
-import { Signup } from './pages/signup/signup';
+import Signin from './pages/signin';
+import Signup from './pages/signup';
 
 function App() {
   return (
     <div>
       {/* <Signin></Signin> */}
-      <Signup></Signup>
+      <Signup />
       {/* <select >
              
                 </select> */}
