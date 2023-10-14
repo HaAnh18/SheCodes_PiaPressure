@@ -8,6 +8,9 @@ import { InputForm } from "../components/InputForm";
 import { ValidationSignin } from "../functions/validationSignin";
 import * as axiosInstance from "../services/axiosService";
 import { NavBar } from "../components/NavBar";
+import { SocialIcon } from 'react-social-icons'
+import { Link } from "react-router-dom";
+
 
 export default function Signin() {
   const [message, setMessage] = useState(null);
@@ -50,8 +53,10 @@ export default function Signin() {
 
 
   return (
-    <div className="flex relative justify-center w-full h-screen bg-gray-50">
-      <NavBar/>
+    <div className="flex justify-center w-full h-screen ">
+      <div className="w=2/5 flex justify-center items-center">
+      <img className="w-4/5" src={require('../assets/signin.png')}></img>
+      </div>
       {message != null && (
         <div className="alert bg-red-100 border-red-400 w-[98%] absolute top-2 left-2 right-2">
           <svg
@@ -70,8 +75,8 @@ export default function Signin() {
           <span>{message}</span>
         </div>
       )}
-      <div className="w-full flex items-center justify-center">
-        <div className="bg-white px-10 py-10 border-2 border-gray-100 w-[450px]">
+      <div className="w-3/5 flex items-center justify-center bg-[#E9F7FA]">
+        <div className="bg-[#E9F7FA] px-10 py-10 border-2 border-gray-100 w-[450px]">
           <h1 className="text-4xl font-semibold text-center">Sign in</h1>
           <form>
             <div className="mt-4">
@@ -111,18 +116,6 @@ export default function Signin() {
               </div>
             </div>
 
-            <div className="ease-in transition-all">
-                <label className="pr-3">Role</label>
-                <select
-                  value={role}
-                  onChange={handleChange("role")}
-                  className="select select-primary w-[88%]"
-                >
-                  <option>Patient</option>
-                  <option>Doctor</option>
-                </select>
-              </div>
-
             <div className="mt-8 flex flex-col gap-y-4 ">
               <button
                 className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-[#4772fa] text-white text-lg font-bold"
@@ -139,12 +132,20 @@ export default function Signin() {
             <span class="flex-shrink mx-4 text-gray-300 text-sm">
               Sign in with
             </span>
-            <div class="flex-grow border-t border-gray-300"></div>
+            <div class="flex-grow border-t border-gray-300">
+
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+          <SocialIcon className="mx-3" url="https://www.google.com" />
+          <SocialIcon className="mx-3" url="https://www.facebook.com"/>
+          <SocialIcon className="mx-3" url="https://twitter.com" />
           </div>
 
           <div className="mt-4 flex justify-center items-center">
             <button className="text-[#4772fa] text-base ml-2">
-              Sign Up for Free
+              <Link to={'/signup'}>Sign Up for Free</Link>
             </button>
           </div>
         </div>

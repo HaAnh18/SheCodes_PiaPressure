@@ -7,11 +7,11 @@ const getListData = (value) => {
       listData = [
         {
           type: 'warning',
-          content: 'This is warning event.',
+          content: 'Session',
         },
         {
           type: 'success',
-          content: 'This is usual event.',
+          content: 'Free',
         },
       ];
       break;
@@ -19,15 +19,15 @@ const getListData = (value) => {
       listData = [
         {
           type: 'warning',
-          content: 'This is warning event.',
+          content: 'Session',
         },
         {
           type: 'success',
-          content: 'This is usual event.',
+          content: 'Free',
         },
         {
           type: 'error',
-          content: 'This is error event.',
+          content: 'Off',
         },
       ];
       break;
@@ -35,27 +35,27 @@ const getListData = (value) => {
       listData = [
         {
           type: 'warning',
-          content: 'This is warning event',
+          content: 'Session',
         },
         {
           type: 'success',
-          content: 'This is very long usual event......',
+          content: 'Free',
         },
         {
           type: 'error',
-          content: 'This is error event 1.',
+          content: 'Off',
         },
         {
           type: 'error',
-          content: 'This is error event 2.',
+          content: 'Off',
         },
         {
           type: 'error',
-          content: 'This is error event 3.',
+          content: 'Off',
         },
         {
           type: 'error',
-          content: 'This is error event 4.',
+          content: 'Off',
         },
       ];
       break;
