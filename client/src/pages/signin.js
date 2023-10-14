@@ -4,9 +4,10 @@ import {
   EnvelopeIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
-import { InputForm } from "../components/ui/InputForm";
+import { InputForm } from "../components/InputForm";
 import { ValidationSignin } from "../functions/validationSignin";
 import * as axiosInstance from "../services/axiosService";
+import { NavBar } from "../components/NavBar";
 
 export default function Signin() {
   const [message, setMessage] = useState(null);
@@ -50,6 +51,7 @@ export default function Signin() {
 
   return (
     <div className="flex relative justify-center w-full h-screen bg-gray-50">
+      <NavBar/>
       {message != null && (
         <div className="alert bg-red-100 border-red-400 w-[98%] absolute top-2 left-2 right-2">
           <svg
