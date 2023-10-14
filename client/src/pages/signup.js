@@ -11,6 +11,7 @@ import {
 import { InputForm } from "../components/InputForm";
 import { Validation } from "../functions/validation";
 import * as axiosInstance from "../services/axiosService";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [values, setValues] = useState({
@@ -94,7 +95,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex relative justify-center bg-gray-50">
+    <div className="flex relative justify-center bg-[#E9F7FA] h-screen">
+      <div className="w=1/2 flex justify-center items-center">
+      <img className="w-4/5" src={require('../assets/signup.png')}></img>
+      </div>
       {message != null && (
         <div className="alert bg-red-100 border-red-400 w-[98%] absolute top-2 left-2 right-2">
           <svg
@@ -113,8 +117,8 @@ export default function Signup() {
           <span>{message}</span>
         </div>
       )}
-      <div className="w-full flex items-center justify-center py-24">
-        <div className="bg-white px-10 py-10 border-2 border-gray-100 w-[450px]">
+      <div className="w-3/5 flex items-center justify-center">
+        <div className="px-10 py-10 border-2 border-gray-100 w-[450px]">
           <h1 className="text-4xl font-semibold text-center">Sign up</h1>
           <form>
             <div className="mt-4">
@@ -276,9 +280,11 @@ export default function Signup() {
             </div>
           </form>
 
-          <div className="mt-8 flex justify-center items-center">
+          <div className="mt-4 flex justify-center items-center">
             <p className="text-base">Have an account already? </p>
-            <button className="text-[#4772fa] text-base ml-2">Sign in</button>
+            <button className="text-[#4772fa] text-base ml-2">
+              <Link to={'/signin'}>Sign in</Link>
+            </button>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export function NavBar() {
         </div>
 
         <div className="mx-3 hover:border-b-2 hover:border-[#6699CF] ">
-          <Link>Find a MentCom</Link>
+          <Link to={"/find"}>Find a MentCom</Link>
         </div>
 
         <div className="mx-3 hover:border-b-2 hover:border-[#6699CF] ">
