@@ -32,12 +32,12 @@ export default function Profile() {
         <div className="flex-none w-1/5 flex items-center justify-center">
           <img
             className="rounded-full h-28 w-28 object-cover "
-            src={require("../assets/user.jpg")}
+            src={require("../assets/doctor.png")}
           ></img>
         </div>
 
         <div className="flex justify-center flex-col ">
-          <p className="pt-2 font-semibold ">Dr. Nguyen Linh</p>
+          <p className="pt-2 font-semibold ">Dr. Charles Deo</p>
           <p className="text-sm text-gray-400">Psychologist</p>
           <div className="mt-10">
             <button className="btn bg-white hover:bg-[#6699CF] hover:text-white border-[#6699CF] text-[#6699CF]">

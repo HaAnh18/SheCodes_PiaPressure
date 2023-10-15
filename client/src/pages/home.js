@@ -35,9 +35,9 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-3 gap-10 px-10">
-        <ProfileCard status="Online" />
-        <ProfileCard status="Away" />
-        <ProfileCard status="Away" />
+      <ProfileCard status="Online" name="Dr. John Wick"/>
+        <ProfileCard status="Online" name="Dr. Quang Tran"/>
+        <ProfileCard status="Online" name="Dr. My Dieu"/>
       </div>
 
       <div className="flex justify-center flex-col items-center mt-10 mb-10">
@@ -100,7 +100,7 @@ export default function Home() {
 
       <div className="flex justify-center relative pb-10">
       {send === true ?
-      <div className="alert alert-success absolute top-2 right-[50px] w-[350px]">
+      <div className="alert alert-success absolute top-6 right-[100px] w-[350px]">
       <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       <span>Thank you for your sharing!</span>
     </div>

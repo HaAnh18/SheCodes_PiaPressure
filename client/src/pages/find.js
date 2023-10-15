@@ -11,12 +11,15 @@ export default function Find() {
         <p className="text-center text-3xl font-semibold ">Find your MentCom</p>
       </div>
       <div className="grid grid-cols-3 gap-10 p-10">
-        <ProfileCard status="Online" />
-        <ProfileCard status="Away" />
-        <ProfileCard status="Away" />
-        <ProfileCard status="Online" />
-        <ProfileCard status="Away" />
-        <ProfileCard status="Away" />
+        <ProfileCard status="Online" name="Dr. Charles Deo"/>
+        <ProfileCard status="Away" name="Dr. Sao Mai"/>
+        <ProfileCard status="Away" name="Dr. Thanh Nguyen"/>
+        <ProfileCard status="Online" name="Dr. John Wick"/>
+        <ProfileCard status="Online" name="Dr. Quang Tran"/>
+        <ProfileCard status="Online" name="Dr. My Dieu"/>
+        <ProfileCard status="Online" name="Dr. John Wick"/>
+        <ProfileCard status="Online" name="Dr. Quang Tran"/>
+        <ProfileCard status="Online" name="Dr. My Dieu"/>
       </div>
 
       <Footer/>

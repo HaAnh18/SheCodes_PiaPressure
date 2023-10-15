@@ -34,14 +34,15 @@ export default function Book() {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axiosInstance.bookAppointment(date, time, note)
-    .then((res) => {
-      console.log(res);
-      navigate("/find");
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+    axiosInstance
+      .bookAppointment(date, time, note)
+      .then((res) => {
+        console.log(res);
+        navigate("/find");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   // const onClick = async(e) => {
@@ -54,13 +55,12 @@ export default function Book() {
       <Link to={"/home"} className="absolute w-16 h-16 top-4 left-4">
         <ArrowLongLeftIcon />
       </Link>
-      <div className="w-1/2">
-        <img src={require("../assets/book.png")}></img>
+      <div className="w-1/2 h-screen">
+        <img className="m-0 p-0 w-full h-screen object-contain" src={require("../assets/book.png")}></img>
       </div>
       <div className="bg-[#E9F7FA] px-10 py-10 border-2 border-gray-100 w-1/2 relative">
         <h1 className="text-4xl mt-0 font-semibold text-center">
-          {" "}
-          Book an appointment{" "}
+          Book an appointment
         </h1>
         <p className="text-sm mt-2 text-center">Fill in the form below</p>
         <form onSubmit={handleSubmit}>
@@ -94,17 +94,32 @@ export default function Book() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-y-4">
-            <button
-              className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-[#4772fa] text-white text-lg font-bold"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Book
-            </button>
-          </div>
+          {time ? (
+            <div className="mt-8 flex flex-col gap-y-4">
+              <button
+                className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-[#4772fa] text-white text-lg font-bold"
+                type="submit"
+                onClick={handleSubmit}
+                disabled="true"
+              >
+                Book
+              </button>
+            </div>
+          ) : (
+          
+            <div className="mt-8 flex flex-col gap-y-4">
+              <button
+                className="btn-disabled active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-gray-300 text-black text-lg font-bold"
+                // type="submit"
+                onClick={handleSubmit}
+                disabled="disabled"
+              >
+                Book
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>
   );
-}
+};

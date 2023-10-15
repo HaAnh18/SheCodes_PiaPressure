@@ -66,13 +66,22 @@ export function NavBar() {
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
-          <a className="justify-between">
+          <Link to={"/home"} className="justify-between">
             Profile
-            <span className="badge">New</span>
-          </a>
+          </Link>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li>
+          <Link to={"/appointment"} className="justify-between">
+            Appointments
+          </Link>
+        </li>    
+
+        <li>
+          <Link to={"/landing"} className="justify-between">
+            Logout
+          </Link>
+        </li>        
+
       </ul>
     </div>
 
