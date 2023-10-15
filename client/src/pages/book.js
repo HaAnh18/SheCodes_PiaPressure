@@ -4,8 +4,8 @@ import HiddenRadio from "../components/HiddenRadio";
 import { Input } from "../components/Input";
 import { InputForm } from "../components/InputForm";
 import { XCircleIcon, ArrowLongLeftIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import * as axiosInstance from "../services/axiosService";
 export default function Book() {
   const [values, setValues] = useState({
     date: "2023-10-15",
@@ -31,10 +31,17 @@ export default function Book() {
   // let bookedDate = values?.date.split('-');
   // let day = bookedDate[bookedDate.length - 1];
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setErrors(ValidationSignin(values));
-    console.log(values);
+    axiosInstance.bookAppointment(date, time, note)
+    .then((res) => {
+      console.log(res);
+      navigate("/find");
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   };
 
   // const onClick = async(e) => {
@@ -91,6 +98,7 @@ export default function Book() {
             <button
               className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-[#4772fa] text-white text-lg font-bold"
               type="submit"
+              onClick={handleSubmit}
             >
               Book
             </button>

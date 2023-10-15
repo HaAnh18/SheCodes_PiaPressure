@@ -2,6 +2,7 @@ import React from 'react'
 import { NavBar } from '../components/NavBar'
 import { ChartBarSquareIcon } from "@heroicons/react/24/outline";
 import { DocumentTextIcon, TagIcon } from "@heroicons/react/24/solid";
+import { Footer } from '../components/Footer';
 
 
 export default function Appointment() {
@@ -51,7 +52,7 @@ export default function Appointment() {
         </div>
       </div>
 
-      <div className="overflow-x-auto mt-10">
+      <div className="overflow-x-auto my-10">
   <table className="table">
     {/* head */}
     <thead>
@@ -73,8 +74,6 @@ export default function Appointment() {
         <td className='flex'>
           <div className='bg-gray-200 w-fit px-4 py-1 rounded-3xl mr-2'>View</div>
           <div className='bg-[#6699CF] w-fit px-4 py-1 rounded-3xl '>Join</div>
-          {/* <button className=''>View</button> */}
-          {/* <button className=''>Join</button> */}
         </td>
       </tr>
 
@@ -87,10 +86,6 @@ export default function Appointment() {
         <td className='flex'>
           <div className='bg-gray-200 w-fit px-4 py-1 rounded-3xl mr-2'>View</div>
           <div className='bg-[#E9F7FA] w-fit px-4 py-1 rounded-3xl '>Cancel</div>
-
-          {/* <div className='bg-[#6699CF] w-fit px-4 py-1 rounded-3xl '>Join</div> */}
-          {/* <button className=''>View</button> */}
-          {/* <button className=''>Join</button> */}
         </td>
       </tr>
 
@@ -165,7 +160,10 @@ export default function Appointment() {
      
     </tbody>
   </table>
+
 </div>
+
+<Footer/>
     </div>
   )
 }

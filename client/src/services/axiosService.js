@@ -33,5 +33,12 @@ export const signin = async( username, password, role) => {
     return res;
   }
 }
-
+export const bookAppointment = async( date, time, problem) => {
+  const res = await axiosInstance.post(`user/book`, {date, time, problem})
+  try {
+    return res;
+  } catch(err) {
+    return res;
+  }
+}
 

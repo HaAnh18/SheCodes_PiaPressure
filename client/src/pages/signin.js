@@ -9,10 +9,11 @@ import { ValidationSignin } from "../functions/validationSignin";
 import * as axiosInstance from "../services/axiosService";
 import { NavBar } from "../components/NavBar";
 import { SocialIcon } from 'react-social-icons'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Signin() {
+  const navigate = useNavigate();
   const [message, setMessage] = useState(null);
   const [values, setValues] = useState({
     username: undefined,
@@ -39,12 +40,16 @@ export default function Signin() {
       errors.password === undefined
     ) {
       // console.log(values);
-      await axiosInstance.signin("username", username, password)
+      await axiosInstance.signin(username, password)
       .then((res) => {
-        console.log(res.data.token);
+        // console.log(res);
+        if (res.data.role === "Patient") {
+          navigate('/home')
+        } else {
+          navigate('/doctor/profile')
+        }
       })
       .catch((err) => {
-        // console.log(err);
         setMessage(err.response.data.message.error);
       })
     } 
