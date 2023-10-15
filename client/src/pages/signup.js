@@ -11,7 +11,7 @@ import {
 import { InputForm } from "../components/InputForm";
 import { Validation } from "../functions/validation";
 import * as axiosInstance from "../services/axiosService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [values, setValues] = useState({
@@ -27,7 +27,7 @@ export default function Signup() {
   });
 
   const [message, setMessage] = useState(null);
-
+  const navigate = useNavigate();
   const {
     name,
     username,
@@ -71,7 +71,8 @@ export default function Signup() {
            await axiosInstance
         .signup(name, username, password, age, address, phone, role, recordId)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
+          navigate('/signin')
         })
         .catch((err) => {
           setMessage(err.response.data.message.error);

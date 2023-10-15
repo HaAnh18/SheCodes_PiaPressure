@@ -6,4 +6,6 @@ router.post('/signup', user.signup)
 
 router.post('/signin', user.signin)
 
+router.post('/book', user.bookAppointment)
+
 module.exports = router;

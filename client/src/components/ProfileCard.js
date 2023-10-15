@@ -2,6 +2,7 @@ import React from "react";
 import {
   StarIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export function ProfileCard({status}) {
   return (
@@ -35,7 +36,9 @@ export function ProfileCard({status}) {
 
       <div className="flex justify-around mt-4">
         <button className="btn rounded-3xl bg-[#6699CF] text-white m-0 px-4 text-xs">View Profile</button>
-        <button className="btn rounded-3xl bg-black text-white m-0 px-4 text-xs">Book now</button>
+        <button className="btn rounded-3xl bg-black text-white m-0 px-4 text-xs">
+          <Link to={'/book'}>Book now</Link>
+        </button>
       </div>
     </div>
   )

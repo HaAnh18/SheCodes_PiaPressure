@@ -15,13 +15,17 @@ export function NavBar2() {
   </div>
   <div className="flex-none">
       <label tabIndex={0} className="btn btn-ghost m-2">
+          <Link to={"/signin"}>
           Sign in 
+          </Link>
   
       </label>
 
       <label tabIndex={1} className="btn btn-ghost bg-[#343A40] text-white hover:text-black">
 
+        <Link to={"/signup"}>
         Sign up
+        </Link>
   
       </label>
   

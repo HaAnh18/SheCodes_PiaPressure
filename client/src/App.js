@@ -12,6 +12,9 @@ import Landing from './pages/landing';
 import Find from './pages/find';
 import Appointment from './pages/appointment';
 import RoomCall from './pages/roomCall';
+import DoctorAppointment from './pages/doctorAppointment';
+import AppointmentDetail from './pages/appointmentDetail';
+import DoctorProfile from './pages/doctorProfile';
 
 function App() {
   return (
@@ -32,6 +35,10 @@ function App() {
       <Route path='/find' element={<Find/>}></Route>
       <Route path='/appointment' element={<Appointment/>}></Route>
       <Route path='/roomcall' element={<RoomCall/>}></Route>
+      <Route path='/doctor/appointment' element={<DoctorAppointment/>}></Route>
+      <Route path='/doctor/appointmentdetail' element={<AppointmentDetail/>}></Route>
+      <Route path='/doctor/profile' element={<DoctorProfile/>}></Route>
+
     </Routes>
     // <Form/>
     // <Book/>

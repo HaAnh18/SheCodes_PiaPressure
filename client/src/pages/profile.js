@@ -29,7 +29,7 @@ export default function Profile() {
     } */}
       <NavBar />
       <div className="flex p-16">
-        <div className="flex-none w-1/5 flex items-center">
+        <div className="flex-none w-1/5 flex items-center justify-center">
           <img
             className="rounded-full h-28 w-28 object-cover "
             src={require("../assets/user.jpg")}
